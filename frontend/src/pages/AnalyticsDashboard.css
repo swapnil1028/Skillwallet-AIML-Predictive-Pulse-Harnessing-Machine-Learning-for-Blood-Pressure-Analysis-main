@@ -1,0 +1,169 @@
+.analytics-container {
+  padding: 1rem 0 3rem 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.analytics-header {
+  margin-bottom: 2.5rem;
+}
+
+.analytics-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Metric Cards */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+}
+
+.metric-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+/* Charts */
+.chart-card {
+  padding: 1.5rem;
+}
+
+.chart-wrapper {
+  height: 300px;
+  margin-top: 1rem;
+}
+
+.recharts-tooltip-cursor {
+  fill: var(--bg-card);
+}
+
+.recharts-default-tooltip {
+  background-color: var(--bg-main) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Data Table */
+.table-card {
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.premium-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.premium-table th {
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.premium-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.premium-table tr:hover td {
+  background: var(--bg-card);
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--text-muted);
+}
+
+/* Status Pills */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-normal {
+  background: var(--status-normal-bg);
+  color: var(--status-normal);
+  border: 1px solid var(--status-normal);
+}
+
+.status-warning {
+  background: var(--status-stage1-bg);
+  color: var(--status-stage1);
+  border: 1px solid var(--status-stage1);
+}
+
+.status-danger {
+  background: var(--status-stage2-bg);
+  color: var(--status-stage2);
+  border: 1px solid var(--status-stage2);
+}
+
+.status-critical {
+  background: var(--status-crisis-bg);
+  color: var(--status-crisis);
+  border: 1px solid var(--status-crisis);
+}
+
+.text-muted {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

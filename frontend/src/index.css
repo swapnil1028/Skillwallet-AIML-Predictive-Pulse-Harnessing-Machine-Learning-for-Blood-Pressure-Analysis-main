@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Core Colors */
+  --bg-main: #ffffff; /* Clean White */
+  --bg-card: rgba(240, 253, 244, 0.7); /* Light Green tint */
+  --bg-card-hover: rgba(220, 252, 231, 0.95);
+  
+  /* Accents */
+  --accent-primary: #22c55e; /* Bright Green */
+  --accent-secondary: #4ade80; /* Lighter Green */
+  --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --accent-glow: rgba(34, 197, 94, 0.25);
+
+  /* Status Colors */
+  --status-normal: #22c55e;
+  --status-normal-bg: rgba(34, 197, 94, 0.15);
+  --status-stage1: #16a34a; 
+  --status-stage1-bg: rgba(22, 163, 74, 0.15);
+  --status-stage2: #15803d; 
+  --status-stage2-bg: rgba(21, 128, 61, 0.15);
+  --status-crisis: #166534; 
+  --status-crisis-bg: rgba(22, 101, 52, 0.15);
+
+  /* Text & Borders */
+  --text-main: #14532d; /* Very dark green text instead of slate */
+  --text-muted: #166534; /* Dark green for muted text */
+  --border-light: rgba(34, 197, 94, 0.2); /* Light green border */
+  --border-focus: rgba(34, 197, 94, 0.5);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(34, 197, 94, 0.05), 0 2px 4px -1px rgba(34, 197, 94, 0.03);
+  --shadow-glow: 0 0 20px var(--accent-glow);
+  --shadow-glass: inset 0 0 0 1px var(--border-light);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(22, 163, 74, 0.05) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-glass), var(--shadow-sm);
+}
+
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Layout Utilities */
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Scrollbar styling for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

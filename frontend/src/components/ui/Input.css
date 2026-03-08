@@ -1,0 +1,73 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  pointer-events: none;
+}
+
+.premium-input {
+  width: 100%;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.premium-input.with-icon {
+  padding-left: 2.75rem;
+}
+
+.premium-input:hover {
+  border-color: var(--accent-primary);
+}
+
+.premium-input:focus {
+  border-color: var(--accent-primary);
+  background: var(--bg-main);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.premium-input:focus ~ .input-icon, /* Fixed: Selects icon if structure allowed */
+.input-wrapper:focus-within .input-icon {
+  color: var(--accent-primary);
+}
+
+.premium-input.error {
+  border-color: var(--status-crisis);
+}
+
+.premium-input.error:focus {
+  box-shadow: 0 0 0 3px var(--status-crisis-bg);
+}
+
+.input-error {
+  font-size: 0.75rem;
+  color: var(--status-crisis);
+  margin-top: -0.25rem;
+}

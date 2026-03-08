@@ -1,0 +1,259 @@
+.how-it-works-container {
+  padding: 1rem 0 3rem 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.how-it-works-header {
+  margin-bottom: 2.5rem;
+}
+
+.how-it-works-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-card {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 1rem;
+}
+
+.icon-wrapper {
+  background: var(--bg-card);
+  color: var(--accent-primary);
+  padding: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.content-block {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0.5rem 1rem;
+}
+
+.detail-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(22, 101, 52, 0.03);
+  border-radius: 12px;
+  border: 1px dashed var(--border-light);
+}
+
+.detail-item strong {
+  display: block;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.detail-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.architecture-details {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.arch-node {
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.arch-node strong {
+  display: block;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.arch-node p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.content-block p {
+  margin-bottom: 1rem;
+}
+
+.content-block ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.content-block li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.content-block li::before {
+  content: "•";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.model-item {
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  padding: 1.25rem;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+}
+
+.model-item:hover {
+  background: var(--bg-card);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.model-header h4 {
+  color: var(--text-main);
+  margin: 0;
+  font-size: 1.05rem;
+  padding-right: 0.5rem;
+}
+
+.accuracy-badge {
+  background: var(--bg-card);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.model-item p {
+  color: var(--text-light);
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Diagram Section Styles */
+.diagram-section {
+  animation-delay: 0.6s;
+}
+
+.content-block.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.diagram-desc {
+  max-width: 800px;
+  margin-bottom: 2rem !important;
+}
+
+.diagram-container {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(22, 101, 52, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.diagram-container.vertical-flow {
+  max-width: 600px;
+  padding: 3rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.flow-diagram {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.flow-diagram.vertical {
+  max-height: 1000px;
+  filter: drop-shadow(0 15px 25px rgba(22, 101, 52, 0.1));
+}
+
+.diagram-overlay {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.flow-diagram:hover {
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+}
